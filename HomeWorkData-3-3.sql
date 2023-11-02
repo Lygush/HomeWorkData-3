@@ -23,6 +23,7 @@ FROM artist
 JOIN artist_album aa ON aa.artist_id = (SELECT id FROM artist WHERE artist_name = 'Misfits')
 JOIN song ON song.album_id = aa.album_id 
 JOIN collection_song cs ON cs.song_id = song.id 
-JOIN collection c ON c.id = cs.collection_id
+JOIN collection c ON c.id = cs.collection_id;
+
 
 
